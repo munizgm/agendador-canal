@@ -1,0 +1,15 @@
+{
+  "name": "Agenda – renovar token do Instagram",
+  "nodes": [
+    { "parameters": { "rule": { "interval": [ { "field": "cronExpression", "expression": "0 4 * * 1" } ] } },
+      "name": "Toda segunda 4h", "type": "n8n-nodes-base.scheduleTrigger", "typeVersion": 1.2, "position": [0, 0] },
+    { "parameters": {
+        "method": "POST",
+        "url": "https://SEU-APP.vercel.app/api/cron/token",
+        "sendHeaders": true,
+        "headerParameters": { "parameters": [ { "name": "x-cron-secret", "value": "COLE_AQUI_O_CRON_SECRET" } ] } },
+      "name": "Chamar /api/cron/token", "type": "n8n-nodes-base.httpRequest", "typeVersion": 4.2, "position": [260, 0] }
+  ],
+  "connections": { "Toda segunda 4h": { "main": [ [ { "node": "Chamar /api/cron/token", "type": "main", "index": 0 } ] ] } },
+  "settings": { "executionOrder": "v1" }
+}

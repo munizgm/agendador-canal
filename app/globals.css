@@ -1,0 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:ital,wght@0,600;1,500&display=swap');
+@tailwind base; @tailwind components; @tailwind utilities;
+body { @apply bg-ink text-cream font-sans; }
+.inp { @apply w-full rounded-lg bg-ink border border-line px-3 py-2 text-sm outline-none focus:border-gold; }
+.btn { @apply rounded-lg bg-gold text-ink font-semibold px-4 py-2 text-sm hover:opacity-90 disabled:opacity-50; }
+.btn2 { @apply rounded-lg border border-line px-3 py-1.5 text-xs hover:border-gold; }
+.card { @apply rounded-xl bg-card border border-line p-4; }
